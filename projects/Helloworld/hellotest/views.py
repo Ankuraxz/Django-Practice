@@ -6,7 +6,7 @@ def home(request):
     return render(request, 'home.html', {'name': 'Ankur'})
 
 
-def add(request): #GET REQUEST
+def add(request): #POST REQUEST
     num1 = float(request.POST['num1'])
     num2 = float(request.POST['num2'])
     x = int(request.POST['places'])
