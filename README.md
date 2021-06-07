@@ -1,2 +1,2 @@
 # Django-Practice
-Django REST Framework Practice Repository
+Django Practice Repository
