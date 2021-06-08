@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import ads
+from .models import ads,contact
 
 
 # Create your views here.
@@ -11,10 +11,12 @@ def index(request):
     return render(request, 'index.html', {'about': 'This About Us is Dynamic',
                                           'ad1': ad1})
 def contact(request):
-    name = str(request.POST['name'])
-    email = str(request.POST['email'])
-    phone = int(request.POST['phone'])
-    message = str(request.POST['message'])
+    contact1 = contact()
+
+    contact1.name = str(request.POST['name'])
+    contact1.email = str(request.POST['email'])
+    contact1.phone = int(request.POST['phone'])
+    contact1.message = str(request.POST['message'])
     return render(request, 'index.html', {'status': True})
 
 def subscribe(request):
