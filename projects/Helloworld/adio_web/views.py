@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import ads,contact
+from .models import ads,contacts
 
 
 # Create your views here.
@@ -11,7 +11,7 @@ def index(request):
     return render(request, 'index.html', {'about': 'This About Us is Dynamic',
                                           'ad1': ad1})
 def contact(request):
-    contact1 = contact()
+    contact1 = contacts()
 
     contact1.name = str(request.POST['name'])
     contact1.email = str(request.POST['email'])
