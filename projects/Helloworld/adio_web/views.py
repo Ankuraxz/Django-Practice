@@ -16,3 +16,7 @@ def contact(request):
     phone = int(request.POST['phone'])
     message = str(request.POST['message'])
     return render(request, 'index.html', {'status': True})
+
+def subscribe(request):
+    email = str(request.GET['email'])
+    return render(request, 'index.html', {'substatus': True})

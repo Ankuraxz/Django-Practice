@@ -286,8 +286,9 @@
                                   <input type="text" class="email-bt" placeholder="MESSAGE" name="message">
                                 </div>
                               <div class="form-group">
-                                  <input type="submit">
+                                  <input class="send_bt" type="submit">
                                 </div>
+
 
 
                           </form>
@@ -309,26 +310,20 @@
                        </div>
                     </div>
 		    		</div>
-		    		<div class="col-md-6">
-		    			<div class="map_section">
-		                    <div class="row">
-			            <div class="col-sm-12">
-				            <div class="full map_section">
-                               <div id="map"></div>
-                            </div>
-			            </div>
-		            </div>
-	                 </div>
+
+                    <form action="subscribe" method="get">
 		    			<h1 class="newsletter_text">Newsletter</h1>
 		    			<div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="ENTER YOUR MAIL" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <input type="text" class="form-control" placeholder="ENTER YOUR MAIL" name="email">
                        <div class="input-group-append">
-                       <span class="input-group-text" id="basic-addon2">SUBSCRIBE</span>
+                       <input type="submit" class="input-group-text" id="basic-addon2">
                        </div>
+                            {% if substatus %}
+                               <p class="long_text"><a style="color: #81d4fa">Subscription Successful</a></p>
+                           {% endif %}
                        </div>
-		    		</div>
-		    	</div>
-		    </div>
+                    </form>
+
 		    <div class="copyright_section">
                 <p class="copyright_text">Copyright 2019 All Right Reserved By.<a href="https://html.design"> Free  html Templates</a></p>
 		    </div>
