@@ -10,7 +10,7 @@ class ads:
     desc: str  # Ad Desc
     img: str  # Image of Ad
 class contact(models.Model):
-    phone: models.BigIntegerField(max_length=10)
-    name: models.CharField(max_length=50)
-    email: models.EmailField(max_length=100)
-    message: models.TextField()
+    phone= models.BigIntegerField(max_length=10)
+    name= models.CharField(max_length=50)
+    email= models.EmailField(max_length=100)
+    message= models.TextField()
