@@ -173,11 +173,11 @@
     		</div>
     		<div class="row front">
     			<div class="col-md-2">
-    				<div class="about_img"><img src="{% static 'images/img-1.png'%}"></div>
+    				<div class="about_img"><img src={{ ad1.img }}></div>
     			</div>
     			<div class="col-md-10">
-    				<h1 class="fron_text"> FRONT END MULTICURRENCY</h1>
-    				<p class="using_text">using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model</p>
+    				<h1 class="fron_text"> {{ ad1.name}}</h1>
+    				<p class="using_text">{{ ad1.desc}}</p>
     			</div>
     		</div>
     		<div class="row front">
