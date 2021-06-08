@@ -10,3 +10,9 @@ def index(request):
     ad1.img = "https://upload.wikimedia.org/wikipedia/commons/2/2a/New_Logo_AD.jpg"
     return render(request, 'index.html', {'about': 'This About Us is Dynamic',
                                           'ad1': ad1})
+def contact(request):
+    name = str(request.POST['name'])
+    email = str(request.POST['email'])
+    phone = int(request.POST['phone'])
+    message = str(request.POST['message'])
+    return render(request, 'index.html', {'status': True})

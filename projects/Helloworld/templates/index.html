@@ -270,27 +270,32 @@
 		    		<div class="col-md-6">
 		    			<div class="input_main">
                        <div class="container">
-                          <form action="/action_page.php">
+                          <form action="contact" method="post">
+                              {% csrf_token %}
                             <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="NAME" name="Name">
+                              <input type="text" class="email-bt" placeholder="NAME" name="name">
                             </div>
                             <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="EMAIL" name="Email">
+                              <input type="text" class="email-bt" placeholder="EMAIL" name="email">
                             </div>
                             <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="PHONE NUMBER" name="Email">
+                              <input type="text" class="email-bt" placeholder="PHONE NUMBER" name="phone">
                             </div>
-                            <form action="">
+
                                 <div class="form-group">
-                                  <textarea class="massage-bt" placeholder="MASSAGE" rows="5" id="comment" name="text"></textarea>
+                                  <input type="text" class="email-bt" placeholder="MESSAGE" name="message">
                                 </div>
-                            </form>
+                              <div class="form-group">
+                                  <input type="submit">
+                                </div>
+
+
                           </form>
+                           {% if status %}
+                               <p class="long_text"><a style="color: #81d4fa">Complaint/ Suggestion Saved Successfully</a></p>
+                           {% endif %}
                        </div> 
-                       <div class="send_bt_main">
-                       	<div class="left">
-                       		<div class="send_bt"><a href="#">SEND</a></div>
-                       	</div>
+
                        	<div class="right">
                        		<div class="social_icon">
                        			<ul>
